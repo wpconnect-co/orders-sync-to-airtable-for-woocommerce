@@ -1,0 +1,15 @@
+{
+    "name": "wpconnect/orders-sync-to-airtable-for-woocommerce",
+    "require": {
+      "yoast/phpunit-polyfills": "^1.0",
+      "squizlabs/php_codesniffer": "3.*",
+      "phpcompatibility/phpcompatibility-wp": "*",
+      "dealerdirect/phpcodesniffer-composer-installer": "1.*",
+      "wp-coding-standards/wpcs": "3.*"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

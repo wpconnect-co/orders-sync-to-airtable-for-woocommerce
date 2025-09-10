@@ -1,0 +1,103 @@
+{
+  "name": "air-wp-sync-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run clean-build && npm run rollup && shx mkdir -p ../../js/air-wp-sync-ui && shx cp package.json ../../js/air-wp-sync-ui/package.json && shx cp -r library ../../js/air-wp-sync-ui/ && rm ../../js/air-wp-sync-ui/library/.js && rm ../../js/air-wp-sync-ui/library/.js.map",
+    "clean-build": "shx --silent rm -rf ../../js/air-wp-sync-ui",
+    "rollup": "npm run clean-library && rollup -c --bundleConfigAsCjs",
+    "clean-library": "shx --silent rm -rf library",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "dev:icons": "npx @svgr/cli --out-dir src/components/graphics/icons --title-prop --ignore-existing --typescript --ext tsx -- icons"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "library/index.js",
+  "types": "library/index.d.ts",
+  "files": [
+    "library"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.25",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.0.2",
+    "@storybook/addon-interactions": "^8.0.2",
+    "@storybook/addon-links": "^8.0.2",
+    "@storybook/addon-onboarding": "^8.0.2",
+    "@storybook/blocks": "^8.0.2",
+    "@storybook/preset-create-react-app": "^8.0.2",
+    "@storybook/preview-api": "^8.0.2",
+    "@storybook/react": "^8.0.2",
+    "@storybook/react-webpack5": "^8.0.2",
+    "@storybook/test": "^8.0.2",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.91",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "@types/react-transition-group": "^4.4.10",
+    "@types/sortablejs": "^1.15.8",
+    "array-move": "^4.0.0",
+    "classnames": "^2.5.1",
+    "eslint-plugin-storybook": "^0.8.0",
+    "postcss": "^8.4.38",
+    "postcss-add-root-selector": "^1.0.5",
+    "prop-types": "^15.8.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.8.0",
+    "react-transition-group": "^4.4.5",
+    "rollup": "^4.13.0",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-generate-package-json": "^3.2.0",
+    "rollup-plugin-ignore-import": "^1.3.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "shx": "^0.3.4",
+    "sortablejs": "*",
+    "storybook": "^8.0.2",
+    "storybook-addon-pseudo-states": "^2.3.0-next.1",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "peerDependencies": {
+    "array-move": "^4.0.0",
+    "classnames": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-select": "^5.8.0",
+    "react-transition-group": "^4.4.5",
+    "sortablejs": "^1.15.2",
+    "uuid": "^9.0.1"
+  }
+}

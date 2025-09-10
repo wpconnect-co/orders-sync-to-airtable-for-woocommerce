@@ -1,0 +1,45 @@
+{
+  "default_fields": {
+    "orders": [ "Order #", "Date created", "Status", "Total", "Customer", "Billing First name", "Billing Last name", "Billing Company", "Billing Address line 1", "Billing Address line 2", "Billing City", "Billing Postcode / ZIP", "Billing Country / Region", "Billing State / County", "Billing Email address", "Billing Phone", "Payment method", "Transaction ID", "Shipping First name", "Shipping Last name", "Shipping Company", "Shipping Address line 1", "Shipping Address line 2", "Shipping City", "Shipping Postcode / ZIP", "Shipping State / County", "Shipping Country / Region", "Shipping Phone", "Customer provided note" ]
+  },
+  "default_fields_required": {
+    "orders": [ ]
+  },
+  "table_templates": {
+    "orders": {
+      "name": "Orders",
+      "fields": {
+       "Order #": "order::order_number",
+       "Date created": "order::date_created",
+       "Status": "order::status",
+       "Total": "order::total",
+       "Customer": "order_customer::email",
+       "Billing First name": "order_billing::billing_first_name",
+       "Billing Last name": "order_billing::billing_last_name",
+       "Billing Company": "order_billing::billing_company",
+       "Billing Address line 1": "order_billing::billing_address_1",
+       "Billing Address line 2": "order_billing::billing_address_2",
+       "Billing City": "order_billing::billing_city",
+       "Billing Postcode / ZIP": "order_billing::billing_postcode",
+       "Billing Country / Region": "order_billing::billing_country",
+       "Billing State / County": "order_billing::billing_state",
+       "Billing Email address": "order_billing::billing_email",
+       "Billing Phone": "order_billing::billing_phone",
+       "Payment method": "order::payment_method_title",
+       "Transaction ID": "order::transaction_id",
+       "Shipping First name": "order_shipping::shipping_first_name",
+       "Shipping Last name": "order_shipping::shipping_last_name",
+       "Shipping Company": "order_shipping::shipping_company",
+       "Shipping Address line 1": "order_shipping::shipping_address_1",
+       "Shipping Address line 2": "order_shipping::shipping_address_2",
+       "Shipping City": "order_shipping::shipping_city",
+       "Shipping Postcode / ZIP": "order_shipping::shipping_postcode",
+       "Shipping State / County": "order_shipping::shipping_country",
+       "Shipping Country / Region": "order_shipping::shipping_state",
+       "Shipping Phone": "order_shipping::shipping_phone",
+       "Customer provided note": "order::customer_note"
+      }
+    }
+  },
+  "changelog": []
+}

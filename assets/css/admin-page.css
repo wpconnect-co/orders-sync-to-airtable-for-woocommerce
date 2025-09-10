@@ -1,0 +1,58 @@
+/* Globals */
+.orders-sync-to-airtable-for-woocommerce-required {
+  color: #d63638;
+}
+
+.orders-sync-to-airtable-for-woocommerce-field p {
+  width: 25em;
+}
+
+.orders-sync-to-airtable-for-woocommerce-field--invalid {
+  border-color: #d63638 !important;
+  box-shadow: 0 0 2px rgba(214, 54, 56, 0.8);
+}
+
+/* Header */
+.orders-sync-to-airtable-for-woocommerce-admin-header {
+  margin-left: -20px;
+  padding: 30px 20px;
+  background: var(--airwpsync--color--green-500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders-sync-to-airtable-for-woocommerce-admin-header h2 {
+  margin: 0;
+}
+
+.orders-sync-to-airtable-for-woocommerce-admin-header-logo {
+  width: 34px;
+  height: auto;
+  margin-right: 12px;
+}
+
+.orders-sync-to-airtable-for-woocommerce-admin-header-wpco {
+  display: block;
+}
+
+.orders-sync-to-airtable-for-woocommerce-admin-header-wpco img {
+  width: auto;
+  height: 25px;
+}
+
+.orders-sync-to-airtable-for-woocommerce-admin-header-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.25s;
+}
+
+.orders-sync-to-airtable-for-woocommerce-admin-header-link:hover {
+	color: white;
+	opacity: 0.7;
+}
+
+
+

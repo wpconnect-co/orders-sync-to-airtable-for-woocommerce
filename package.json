@@ -1,0 +1,17 @@
+{
+  "name": "orders-sync-to-airtable-for-woocommerce",
+  "version": "1.0.0",
+  "description": "Swiftly connect WooCommerce to Airtable!",
+  "main": "index.js",
+  "scripts": {
+    "archive": "wp dist-archive ./ --plugin-dirname=orders-sync-to-airtable-for-woocommerce",
+    "phpcbf" : "./dev/vendor/bin/phpcbf",
+    "phpcs" : "./dev/vendor/bin/phpcs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpconnect-co/orders-sync-to-airtable-for-woocommerce/"
+  },
+  "author": "WP Connect",
+  "license": "GPL-3.0-or-later"
+}
