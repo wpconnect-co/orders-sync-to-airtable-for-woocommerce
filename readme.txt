@@ -117,3 +117,8 @@ If you need assistance, please open a ticket at our [Support Center](https://wor
 * Make sure your Airtable table structure is properly set up.
 * Fields must match the expected order data columns.
 * Logs can be found in: `/wp-content/uploads/orders-sync-to-airtable-for-woocommerce-logs`
+
+== Source ==
+
+All source code is hosted on github.com (JavaScript source files, development tools...)
+[https://github.com/wpconnect-co/orders-sync-to-airtable-for-woocommerce](https://wpconnect.co/changelog/changelog-orders-sync-to-airtable-for-woocommerce/)
