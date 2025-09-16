@@ -2,6 +2,7 @@
 /**
  * Manages admin exporter page.
  *
+ * @package Orders_Sync_to_Airtable_for_WooCommerce
  */
 
 namespace Orders_Sync_to_Airtable_for_WooCommerce;
