@@ -235,10 +235,10 @@ class Admin {
 	 * @return void
 	 */
 	public function dismissible_notice_script() {
-		wp_register_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice', false );
+		wp_register_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice', false, ['jquery'] );
 		wp_enqueue_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice' );
 		wp_add_inline_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice', "
-			(function () {
+			jQuery(function () {
 				const dismissibleNotices = document.querySelectorAll('.js-orders-sync-to-airtable-for-woocommerce-dismissible-notice');
 				dismissibleNotices.forEach(function (dismissibleNotice) {
 					dismissibleNotice.addEventListener('click', function (e) {
@@ -247,7 +247,7 @@ class Admin {
 						}
 					})
 				});
-			})();
+			});
 		");
 	}
 
