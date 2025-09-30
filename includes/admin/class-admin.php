@@ -43,7 +43,7 @@ class Admin {
 		add_action( 'in_admin_header', array( $this, 'in_admin_header' ) );
 		add_filter( 'orders_sync_to_airtable_for_woocommerce/should_display_admin_header', array( $this, 'should_display_admin_header' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_styles_scripts' ) );
-		add_action( 'admin_notices', array( $this, 'add_notices' ) );
+		add_action( 'current_screen', array( $this, 'add_notices' ) );
 		add_action( 'wp_ajax_orders_sync_to_airtable_for_woocommerce_dismiss_notice', array( $this, 'ajax_dismiss_notice' ) );
 
 		add_filter( 'plugin_action_links_' . ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_BASENAME, array( $this, 'plugin_action_links' ) );
@@ -203,26 +203,28 @@ class Admin {
 					),
 					wp_nonce_url( admin_url( 'admin-ajax.php' ), 'orders_sync_to_airtable_for_woocommerce_dismiss_notice' )
 				);
-				echo wp_kses(
-					sprintf(
-						"<div class='notice notice-warning is-dismissible js-orders-sync-to-airtable-for-woocommerce-dismissible-notice' data-orders-sync-to-airtable-for-woocommerce-dismissible-action='%s'>{$message}</div>",
-						esc_attr( $dismiss_action_url )
-					),
-					array(
-						'div' => array(
-							'class' => array(),
-							'data-orders-sync-to-airtable-for-woocommerce-dismissible-action' => array(),
+				add_action('admin_notices', function () use ($message, $dismiss_action_url) {
+					echo wp_kses(
+						sprintf(
+							"<div class='notice notice-warning is-dismissible js-orders-sync-to-airtable-for-woocommerce-dismissible-notice' data-orders-sync-to-airtable-for-woocommerce-dismissible-action='%s'>%s</div>",
+							esc_attr( $dismiss_action_url ),
+							$message
 						),
-						'p'   => array(),
-						'br'  => array(),
-						'a'   => array(
-							'href'   => array(),
-							'target' => array(),
-						),
-					)
-				);
-
-				add_action( 'admin_footer', array( $this, 'dismissible_notice_script' ) );
+						array(
+							'div' => array(
+								'class' => array(),
+								'data-orders-sync-to-airtable-for-woocommerce-dismissible-action' => array(),
+							),
+							'p'   => array(),
+							'br'  => array(),
+							'a'   => array(
+								'href'   => array(),
+								'target' => array(),
+							),
+						)
+					);
+				});
+				add_action( 'admin_enqueue_scripts', array( $this, 'dismissible_notice_script' ) );
 			}
 		}
 	}
@@ -233,7 +235,9 @@ class Admin {
 	 * @return void
 	 */
 	public function dismissible_notice_script() {
-		?><script>
+		wp_register_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice', false );
+		wp_enqueue_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice' );
+		wp_add_inline_script( 'orders-sync-to-airtable-for-woocommerce-dismiss-notice', "
 			(function () {
 				const dismissibleNotices = document.querySelectorAll('.js-orders-sync-to-airtable-for-woocommerce-dismissible-notice');
 				dismissibleNotices.forEach(function (dismissibleNotice) {
@@ -244,8 +248,7 @@ class Admin {
 					})
 				});
 			})();
-		</script>
-		<?php
+		");
 	}
 
 	/**
