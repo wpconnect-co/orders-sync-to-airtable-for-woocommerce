@@ -75,7 +75,7 @@ class Logger {
 	 *
 	 * @return string
 	 */
-	protected function get_log_dir() {
+	public function get_log_dir() {
 		return untrailingslashit( ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_LOGDIR );
 	}
 
@@ -101,5 +101,15 @@ class Logger {
 			$files = array_values( $files );
 		}
 		return $files;
+	}
+
+	/**
+	 * Returns log dir URL (without trailing slash).
+	 *
+	 * @return string
+	 */
+	public function get_log_dir_url() {
+		$upload_dir_info = wp_upload_dir(null, false);
+		return untrailingslashit(str_replace($upload_dir_info['basedir'], $upload_dir_info['baseurl'], $this->get_log_dir()));
 	}
 }
