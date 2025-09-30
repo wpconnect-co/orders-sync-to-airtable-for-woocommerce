@@ -249,7 +249,7 @@ class Exporter {
 			return false;
 		}
 		$latest_log_file = array_shift( $log_files );
-		$log_dir_url = $this->logger->get_log_dir_url();
+		$log_dir_url     = $this->logger->get_log_dir_url();
 
 		return str_replace( $this->logger->get_log_dir(), $log_dir_url, $latest_log_file );
 	}

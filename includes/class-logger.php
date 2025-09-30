@@ -109,7 +109,7 @@ class Logger {
 	 * @return string
 	 */
 	public function get_log_dir_url() {
-		$upload_dir_info = wp_upload_dir(null, false);
-		return untrailingslashit(str_replace($upload_dir_info['basedir'], $upload_dir_info['baseurl'], $this->get_log_dir()));
+		$upload_dir_info = wp_upload_dir( null, false );
+		return untrailingslashit( str_replace( $upload_dir_info['basedir'], $upload_dir_info['baseurl'], $this->get_log_dir() ) );
 	}
 }
