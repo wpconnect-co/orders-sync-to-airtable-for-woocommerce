@@ -2,6 +2,6 @@
 === Orders Sync to Airtable for WooCommerce ===
 
 = 1.0.0 =
-*Release Date: 22th July 2025*
+*Release Date: 07th Oct. 2025*
 
 * Initial release of Orders Sync to Airtable for WooCommerce.

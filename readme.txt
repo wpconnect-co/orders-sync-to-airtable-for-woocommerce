@@ -122,3 +122,21 @@ If you need assistance, please open a ticket at our [Support Center](https://wor
 
 All source code is hosted on github.com (JavaScript source files, development tools...)
 [https://github.com/wpconnect-co/orders-sync-to-airtable-for-woocommerce](https://wpconnect.co/changelog/changelog-orders-sync-to-airtable-for-woocommerce/)
+
+== External Services ==
+
+This plugin connects to the Airtable API to sync WooCommerce orders into an external Airtable base.
+
+Data sent includes:
+- Customer name and email
+- Order total and order status
+- Product information
+- Stock quantity
+- Shipping and billing addresses (if configured)
+
+Data is sent to Airtable every time a new WooCommerce order is created or updated. It can be synced manually as well.
+
+The Airtable API service is provided by Airtable Inc. You can find their terms and policies here:
+
+- Terms of Service: https://www.airtable.com/company/tos
+- Privacy Policy: https://www.airtable.com/company/privacy
