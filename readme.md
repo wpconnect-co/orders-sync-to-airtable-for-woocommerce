@@ -1,5 +1,7 @@
 # Orders Sync to Airtable for WooCommerce
 
+https://wordpress.org/plugins/orders-sync-to-airtable-for-woocommerce
+
 ## Basic structure
 
 ### Overview
