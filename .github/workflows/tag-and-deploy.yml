@@ -1,0 +1,24 @@
+name: Orders Sync to Airtable for WooCommerce ~ Auto Tag, release and deploy
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  auto-tag-and-release:
+    if: github.event.pull_request.merged == true && 'main' == github.event.pull_request.base.ref && startsWith(github.event.pull_request.head.ref, 'release/')
+    uses: wpconnect-co/github-workflows/.github/workflows/auto-tag-and-release.yml@v1.3
+    permissions:
+      contents: write
+    with:
+      environment: Prod
+
+  deploy:
+    uses: wpconnect-co/github-workflows/.github/workflows/deploy-to-wordpress.yml@v1.3
+    needs: auto-tag-and-release
+    secrets: inherit
+    with:
+      WPC_VERSION: ${{ needs.auto-tag-and-release.outputs.version }}
+      environment: Prod
+      dry-run: false
