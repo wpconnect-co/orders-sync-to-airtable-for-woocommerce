@@ -32,7 +32,7 @@ In the `includes/` folder, there are also two important set of classes.
 
 * A user starts the wizard
 * Enter its Airtable’s access token
-* He chooses a template ("WP connect WooCommerce Orders template" or "Start from scratch" (manual selection of a base / table from Airtable to export data to)
+* He chooses a template ("Orders Sync to Airtable for WooCommerce Template" or "Start from scratch" (manual selection of a base / table from Airtable to export data to)
 * Then he can map fields from WooCommerce to Airtable
 * Finally he chooses sync option: manual or automatic
 
