@@ -76,3 +76,6 @@ A number of scripts in `package.json` are created to speed up development.
 * `phpcs`: Runs PHPCS, using the same config file.
 * `archive`: Creates a zip folder of the plugin. Last step in the build process.
 
+## Publish
+
+The code is automatically published to wordpress.org when a pull request is merged on the main branch from a release/x.x.x branch.
