@@ -110,7 +110,7 @@ You can consult our documentation or contact our support team:
 
 == Support ==
 
-If you need assistance, please open a ticket at our [Support Center](https://wordpress.org/support/plugin/orders-sync-to-airtable-for-woocommerce/).
+If you need assistance, please open a ticket at our [Support Center](https://wordpress.org/support/plugin/orders-sync-to-airtable-for-woocommerce/) or check our [documentation](https://wpconnect.co/orders-sync-to-airtable-for-woocommerce-documentation/).
 
 == Troubleshooting ==
 
@@ -120,8 +120,7 @@ If you need assistance, please open a ticket at our [Support Center](https://wor
 
 == Source ==
 
-All source code is hosted on github.com (JavaScript source files, development tools...)
-[https://github.com/wpconnect-co/orders-sync-to-airtable-for-woocommerce](https://wpconnect.co/changelog/changelog-orders-sync-to-airtable-for-woocommerce/)
+All source code is hosted on [github.com](https://wpconnect.co/changelog/changelog-orders-sync-to-airtable-for-woocommerce/) (JavaScript source files, development tools...)
 
 == External Services ==
 
@@ -138,5 +137,5 @@ Data is sent to Airtable every time a new WooCommerce order is created or update
 
 The Airtable API service is provided by Airtable Inc. You can find their terms and policies here:
 
-- Terms of Service: https://www.airtable.com/company/tos
-- Privacy Policy: https://www.airtable.com/company/privacy
+- [Terms of Service](https://www.airtable.com/company/tos)
+- [Privacy Policy](https://www.airtable.com/company/privacy)
