@@ -21,7 +21,7 @@ Whether you want to manage your order data, automate your reports, or centralize
 
 You can use our **predefined Airtable template** or connect to **your own Airtable base** for maximum flexibility.
 
-Looking to sync **products, inventory, and more** from Airtable to WooCommerce? Check out our full-featured plugin [Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/). It also includes **[Air WP Sync Pro+](https://wpconnect.co/air-wp-sync-plugin/)** which allows you to sync posts, pages, users, and taxonomy terms.
+Looking to sync **products, inventory, and more** from Airtable to WooCommerce? Check out our full-featured plugin **[Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/)**. It also includes **[Air WP Sync Pro+](https://wpconnect.co/air-wp-sync-plugin/)** which allows you to sync posts, pages, users, and taxonomy terms.
 
 == Features ==
 
@@ -46,7 +46,7 @@ Looking to sync **products, inventory, and more** from Airtable to WooCommerce? 
 * No code or complex configurations.
 
 = Want more power? Sync your full store =
-To sync your **products, inventory, custom fields, and SEO data**, upgrade to [Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/). With it, you can:
+To sync your **products, inventory, custom fields, and SEO data**, upgrade to **[Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/)**. With it, you can:
 * Import products from Airtable to WooCommerce, including variable and downloadable products.
 * Keep inventory automatically in sync.
 * Sync WooCommerce custom fields and meta.
@@ -90,12 +90,12 @@ Yes. You can either use the Airtable template we provide or set up your own cust
 Syncs are triggered manually or when an order status changes. They are processed via scheduled tasks and may take a few minutes depending on your server’s cron configuration and API limits.
 
 = Can I sync products and stock too? =
-Not with this plugin. For full WooCommerce-Airtable integration including products, inventory, custom fields, and more, use [Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/), which also includes **Air WP Sync Pro+**.
+Not with this plugin. For full WooCommerce-Airtable integration including products, inventory, custom fields, and more, use **[Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/)**, which also includes **Air WP Sync Pro+**.
 
 = Where can I get help? =
 You can consult our documentation or contact our support team:
-* [Documentation](https://wpconnect.co/orders-sync-to-airtable-for-woocommerce-documentation/)
-* [Support Center](https://wordpress.org/support/plugin/orders-sync-to-airtable-for-woocommerce/)
+* **[Documentation](https://wpconnect.co/orders-sync-to-airtable-for-woocommerce-documentation/)**
+* **[Support Center](https://wordpress.org/support/plugin/orders-sync-to-airtable-for-woocommerce/)**
 
 == Screenshots ==
 
@@ -110,7 +110,7 @@ You can consult our documentation or contact our support team:
 
 == Support ==
 
-If you need assistance, please open a ticket at our [Support Center](https://wordpress.org/support/plugin/orders-sync-to-airtable-for-woocommerce/) or check our [documentation](https://wpconnect.co/orders-sync-to-airtable-for-woocommerce-documentation/).
+If you need assistance, please open a ticket at our **[Support Center](https://wordpress.org/support/plugin/orders-sync-to-airtable-for-woocommerce/)** or check our **[documentation](https://wpconnect.co/orders-sync-to-airtable-for-woocommerce-documentation/)**.
 
 == Troubleshooting ==
 
@@ -120,7 +120,7 @@ If you need assistance, please open a ticket at our [Support Center](https://wor
 
 == Source ==
 
-All source code is hosted on [github.com](https://wpconnect.co/changelog/changelog-orders-sync-to-airtable-for-woocommerce/) (JavaScript source files, development tools...)
+All source code is hosted on [github.com](https://github.com/wpconnect-co/orders-sync-to-airtable-for-woocommerce) (JavaScript source files, development tools...)
 
 == External Services ==
 
