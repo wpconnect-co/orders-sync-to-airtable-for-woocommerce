@@ -15,7 +15,7 @@ Sync WooCommerce orders to Airtable easily and efficiently.
 
 == Description ==
 
-**Orders Sync to Airtable for WooCommerce** is a free plugin that allows you to synchronize your WooCommerce store's orders to your Airtable base with ease.
+**Orders Sync to Airtable for WooCommerce** is a free plugin that allows you to synchronize **automatically** your WooCommerce store's orders to your Airtable base with ease.
 
 Whether you want to manage your order data, automate your reports, or centralize your store activity in Airtable, this plugin helps you streamline the process without manual data entry.
 
@@ -87,7 +87,10 @@ Yes. You’ll need an Airtable account and an access token to connect your store
 Yes. You can either use the Airtable template we provide or set up your own custom base and column mappings.
 
 = Does it sync orders in real time? =
-Syncs are triggered manually or when an order status changes. They are processed via scheduled tasks and may take a few minutes depending on your server’s cron configuration and API limits.
+Yes, orders can sync in real time. Every time a new order is created, it will automatically sync to Airtable. The same applies when the order status is updated.
+
+You also have the option to sync manually by clicking “Save and Sync”. This will sync all orders up to the moment you click the button.
+* The orders are processed via scheduled tasks and may take a few minutes depending on your server’s cron configuration and API limits.
 
 = Can I sync products and stock too? =
 Not with this plugin. For full WooCommerce-Airtable integration including products, inventory, custom fields, and more, use **[Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/)**, which also includes **Air WP Sync Pro+**.
