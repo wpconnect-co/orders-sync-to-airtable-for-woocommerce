@@ -142,3 +142,15 @@ The Airtable API service is provided by Airtable Inc. You can find their terms a
 
 - [Terms of Service](https://www.airtable.com/company/tos)
 - [Privacy Policy](https://www.airtable.com/company/privacy)
+
+This plugin also connects to the TranslationsPress API to fetch and keep plugin translations up to date.
+
+When WordPress checks for translation/plugin updates, the plugin requests a translations manifest from:
+https://packages.translationspress.com/wp-connect/orders-sync-to-airtable-for-woocommerce/packages.json
+
+This request sends no personal data — only a standard HTTP GET to retrieve the list of available translation packages for this plugin. The response is cached transiently. The downloaded language packs are installed by WordPress into the languages directory.
+
+The TranslationsPress service is provided by TranslationsPress. You can find their terms and policies here:
+
+- [Terms of Service](https://translationspress.com/terms/)
+- [Privacy Policy](https://translationspress.com/privacy/)
