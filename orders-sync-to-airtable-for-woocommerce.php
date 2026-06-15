@@ -5,7 +5,7 @@
  * Description: Easily sync your WooCommerce orders with Airtable
  * Version: 1.0.0
  * Requires at least: 5.7
- * Tested up to: 6.8
+ * Tested up to: 7.0
  * Requires PHP: 7.0
  * Requires Plugins: woocommerce
  * Author: WP connect

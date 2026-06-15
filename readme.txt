@@ -4,7 +4,7 @@ Author URI: https://wpconnect.co/
 Contributors: wpconnectco, staurand
 Tags: airtable, woocommerce, orders, api, synchronization
 Requires at least: 5.7
-Tested up to: 6.8
+Tested up to: 7.0
 Tested up to WooCommerce: 10.0
 Requires PHP: 7.0
 Stable tag: 1.0.0
