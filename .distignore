@@ -38,6 +38,7 @@ node_modules
 *.sql
 *.tar.gz
 *.zip
+*.pot
 .phpunit.result.cache
 assets/src
 dist
