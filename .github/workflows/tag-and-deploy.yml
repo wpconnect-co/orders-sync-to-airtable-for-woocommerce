@@ -15,7 +15,7 @@ jobs:
       environment: Prod
 
   deploy:
-    uses: wpconnect-co/public-github-workflows/.github/workflows/deploy-to-wordpress.yml@v1.3
+    uses: wpconnect-co/public-github-workflows/.github/workflows/deploy-to-wordpress.yml@v1.4
     needs: auto-tag-and-release
     secrets: inherit
     with:
