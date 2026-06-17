@@ -4,9 +4,9 @@
  * Plugin URI: https://wordpress.org/plugins/orders-sync-to-airtable-for-woocommerce/
  * Description: Easily sync your WooCommerce orders with Airtable
  * Version: 1.1.0
- * Requires at least: 5.7
+ * Requires at least: 6.0
  * Tested up to: 7.0
- * Requires PHP: 7.0
+ * Requires PHP: 7.4
  * Requires Plugins: woocommerce
  * Author: WP connect
  * Author URI: https://wpconnect.co/
