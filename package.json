@@ -4,7 +4,6 @@
   "description": "Swiftly connect WooCommerce to Airtable!",
   "main": "index.js",
   "scripts": {
-    "make-pot": "wp i18n make-pot ./ orders-sync-to-airtable-for-woocommerce.pot --exclude=vendor,node_modules --headers='{\"Report-Msgid-Bugs-To\":\"https://wpconnect.freshdesk.com/\"}'",
     "archive": "wp dist-archive ./ --plugin-dirname=orders-sync-to-airtable-for-woocommerce",
     "phpcbf" : "./dev/vendor/bin/phpcbf",
     "phpcs" : "./dev/vendor/bin/phpcs"
