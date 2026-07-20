@@ -1,0 +1,17 @@
+{
+  "type": "wordpress-org-free-plugin",
+  "linearTemplateId": "534c3a84-6bfb-4387-876a-e38b120afdfb",
+  "linearTemplateName": "(FREE) Readme Sync Orders to Airtable for WooCommerce",
+  "sources": [
+    {
+      "label": "readme.txt",
+      "path": "readme.txt",
+      "format": "plaintext"
+    },
+    {
+      "label": "changelog.txt",
+      "path": "changelog.txt",
+      "format": "plaintext"
+    }
+  ]
+}
