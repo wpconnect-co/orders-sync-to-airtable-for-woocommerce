@@ -60,7 +60,6 @@ require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/clas
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-template-checker.php';
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-template-structure.php';
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-order-module.php';
-require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-language-pack.php';
 
 
 
@@ -98,21 +97,6 @@ if ( ! function_exists( __NAMESPACE__ . '\uninstall' ) ) {
 		$state->delete_options();
 	}
 }
-
-if ( ! function_exists( __NAMESPACE__ . '\init_language_pack' ) ) {
-	/**
-	 * Init language pack from translationspress.com.
-	 */
-	function init_language_pack() {
-		$t15s_updater = new Language_Packs(
-			'plugin',
-			'orders-sync-to-airtable-for-woocommerce',
-			'https://packages.translationspress.com/wp-connect/orders-sync-to-airtable-for-woocommerce/packages.json'
-		);
-		$t15s_updater->add_project();
-	}
-}
-add_action( 'init', __NAMESPACE__ . '\init_language_pack' );
 
 // Init plugin.
 new Bootstrap();
