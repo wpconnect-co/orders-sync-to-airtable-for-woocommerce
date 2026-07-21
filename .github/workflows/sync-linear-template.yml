@@ -31,7 +31,7 @@ permissions:
 jobs:
   sync-linear-template:
     if: github.event_name != 'pull_request' || startsWith(github.head_ref, 'release/')
-    uses: wpconnect-co/github-workflows/.github/workflows/sync-linear-template.yml@main
+    uses: wpconnect-co/public-github-workflows/.github/workflows/sync-linear-template.yml@main
     with:
       apply: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.apply == true) }}
       require_release_merge: ${{ github.event_name == 'push' }}
