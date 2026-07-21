@@ -2,11 +2,13 @@ name: Sync Linear readme template
 
 on:
   pull_request:
+    branches:
+      - main
     paths:
       - readme.txt
       - changelog.txt
       - .github/linear-template.json
-      - scripts/sync-linear-template.mjs
+      - dev/sync-linear-template.mjs
       - .github/workflows/sync-linear-template.yml
   push:
     branches:
@@ -15,7 +17,7 @@ on:
       - readme.txt
       - changelog.txt
       - .github/linear-template.json
-      - scripts/sync-linear-template.mjs
+      - dev/sync-linear-template.mjs
       - .github/workflows/sync-linear-template.yml
   workflow_dispatch:
     inputs:
@@ -24,25 +26,47 @@ on:
         type: boolean
         default: false
 
+permissions:
+  contents: read
+  pull-requests: read
+
 jobs:
   sync-linear-template:
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || startsWith(github.head_ref, 'release/')
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Validate Linear template sync inputs
         if: github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && inputs.apply == false)
         env:
           LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
-        run: node scripts/sync-linear-template.mjs --dry-run
+        run: node dev/sync-linear-template.mjs --dry-run
+
+      - name: Check release merge source
+        id: release_merge
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+        run: |
+          prs_json="$(curl -fsSL             -H "Accept: application/vnd.github+json"             -H "Authorization: Bearer ${GH_TOKEN}"             -H "X-GitHub-Api-Version: 2022-11-28"             "https://api.github.com/repos/${REPOSITORY}/commits/${SHA}/pulls")"
+
+          if echo "${prs_json}" | jq -e '.[] | select(.merged_at != null and (.head.ref | startswith("release/")))' >/dev/null; then
+            echo "should_apply=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "should_apply=false" >> "${GITHUB_OUTPUT}"
+            echo "Skipping Linear template sync: main push was not produced by a merged release/* PR."
+          fi
 
       - name: Sync Linear template from main
-        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.apply == true)
+        if: (github.event_name == 'push' && steps.release_merge.outputs.should_apply == 'true') || (github.event_name == 'workflow_dispatch' && inputs.apply == true)
         env:
           LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
-        run: node scripts/sync-linear-template.mjs --apply
+        run: node dev/sync-linear-template.mjs --apply
