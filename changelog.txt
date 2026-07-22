@@ -1,6 +1,11 @@
 == Changelog ==
 === Orders Sync to Airtable for WooCommerce ===
 
+= 1.0.1 =
+*Release Date: 21st July 2026*
+
+* Compatibility with WordPress 7.0.
+
 = 1.0.0 =
 *Release Date: 07th Oct. 2025*
 
