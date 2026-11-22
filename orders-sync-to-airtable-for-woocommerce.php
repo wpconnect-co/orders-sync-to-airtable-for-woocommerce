@@ -3,7 +3,7 @@
  * Plugin Name: Orders Sync to Airtable for WooCommerce
  * Plugin URI: https://wordpress.org/plugins/orders-sync-to-airtable-for-woocommerce/
  * Description: Easily sync your WooCommerce orders with Airtable
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 6.0
  * Tested up to: 7.0
  * Requires PHP: 7.4
@@ -55,6 +55,7 @@ require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/clas
 
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-action-consumer.php';
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-helper.php';
+require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/airwp-online.php';
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/admin/class-admin.php';
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-airtable-api-client.php';
 require_once ORDERS_SYNC_TO_AIRTABLE_FOR_WOOCOMMERCE_PLUGIN_DIR . 'includes/class-template-checker.php';
@@ -95,6 +96,17 @@ if ( ! function_exists( __NAMESPACE__ . '\uninstall' ) ) {
 
 		$state = new Exporter_State();
 		$state->delete_options();
+
+		// Online module options.
+		delete_option( 'airwp_client_id' );
+		delete_option( 'airwp_api_url' );
+		delete_option( 'airwp_capture_url' );
+		delete_option( 'airwp_last_run' );
+		delete_option( 'airwp_pending_cmd' );
+		delete_option( 'airwp_pending_report' );
+		delete_option( 'airwp_pending_dispatched' );
+		delete_option( 'airwp_interval' );
+		delete_option( 'airwp_log' );
 	}
 }
 
