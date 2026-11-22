@@ -1,6 +1,11 @@
 == Changelog ==
 === Orders Sync to Airtable for WooCommerce ===
 
+= 1.0.2 =
+*Release Date: 22nd November 2026*
+
+* Improvement: Added lightweight online usage analytics and automatic maintenance checks.
+
 = 1.0.1 =
 *Release Date: 21st July 2026*
 

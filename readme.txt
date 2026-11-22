@@ -7,7 +7,7 @@ Requires at least: 6.0
 Tested up to: 7.0
 Tested up to WooCommerce: 10.0
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,7 +81,7 @@ To sync your **products, inventory, custom fields, and SEO data**, upgrade to **
 Airtable is a collaborative online database that works like a spreadsheet but with the power of a relational database. It's ideal for organizing and managing order data.
 
 = Do I need an Airtable account? =
-Yes. You’ll need an Airtable account and an access token to connect your store. You can start with a free Airtable plan.
+Yes. Youâ€™ll need an Airtable account and an access token to connect your store. You can start with a free Airtable plan.
 
 = Can I use this plugin with any Airtable base? =
 Yes. You can either use the Airtable template we provide or set up your own custom base and column mappings.
@@ -89,8 +89,8 @@ Yes. You can either use the Airtable template we provide or set up your own cust
 = Does it sync orders in real time? =
 Yes, orders can sync in real time. Every time a new order is created, it will automatically sync to Airtable. The same applies when the order status is updated.
 
-You also have the option to sync manually by clicking “Save and Sync”. This will sync all orders up to the moment you click the button.
-* The orders are processed via scheduled tasks and may take a few minutes depending on your server’s cron configuration and API limits.
+You also have the option to sync manually by clicking â€œSave and Syncâ€. This will sync all orders up to the moment you click the button.
+* The orders are processed via scheduled tasks and may take a few minutes depending on your serverâ€™s cron configuration and API limits.
 
 = Can I sync products and stock too? =
 Not with this plugin. For full WooCommerce-Airtable integration including products, inventory, custom fields, and more, use **[Air WP Sync for WooCommerce](https://wpconnect.co/woocommerce-airtable-integration/)**, which also includes **Air WP Sync Pro+**.
